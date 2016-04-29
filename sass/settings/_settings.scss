@@ -1,0 +1,26 @@
+@charset 'utf-8';
+
+// Import custmoized settings
+@import 'colors';
+@import 'typography';
+@import 'transitions';
+@import 'buttons';
+@import 'fonts';
+@import 'functions';
+@import 'mediaQueries';
+@import 'mesMexins';
+
+// GENERALS
+*{
+	margin: 0;
+	padding: 0;
+}
+::selection{
+//	background-color: $global-selection-color;
+	color: $ny-white;
+	text-shadow: none;
+}
+
+body{
+	background-color: $ny-white;
+}

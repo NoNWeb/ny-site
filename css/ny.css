@@ -1,0 +1,44 @@
+/*
+  @package Namaste-Yoga theme
+*/
+/*===========================================================*/
+/*  Style by Mutuyimana
+/*  mutuyimana@gmail.com
+/*  no-n.com
+/*===========================================================*/
+/*
+  GLOBAL SETTINGS FOR NAMASTE-YOGA.FR
+  ________________________________________________________________________________
+*/
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700,800);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700,800);
+body {
+  font-size: 14px;
+  color: #333;
+  font-family: "Roboto Slab", sans-serif; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+::selection {
+  color: #fff;
+  text-shadow: none; }
+
+body {
+  background-color: #fff; }
+
+/*
+  HEADER
+  ________________________________________________________________________________
+*/
+/*
+  MAIN
+  ________________________________________________________________________________
+*/
+/*
+  FOOTER
+  ________________________________________________________________________________
+*/
+
+/*# sourceMappingURL=ny.css.map */
