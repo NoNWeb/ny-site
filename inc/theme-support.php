@@ -36,3 +36,17 @@ function ny_register_nav_menu(){
   register_nav_menu('primary', 'Menu Principal');
 }
 add_action('after_setup_theme', 'ny_register_nav_menu');
+
+/* Add Excerpts to pages */
+function ny_add_excerpts_to_pages(){
+  add_post_type_support('page', 'excerpt');
+}
+add_action('after_setup_theme', 'ny_add_excerpts_to_pages');
+
+/* Register Taxonomies */
+// function ny_register_taxonomies(){
+//   register_taxonomy('acivities', 'post', array(
+//     'label' => 'Activites'
+//   ));
+// }
+// add_action('after_setup_theme', 'ny_register_taxonomies');

@@ -13,9 +13,13 @@
 // GENERALS
 
 ::selection{
-//	background-color: $global-selection-color;
-	color: $ny-white;
+	background-color: lighten($ny-orange, 35);
+	color: $ny-grey;
 	text-shadow: none;
+}
+
+.clear{
+	clear: both;
 }
 
 body{

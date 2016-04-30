@@ -20,8 +20,12 @@ body {
   font-family: "Roboto Slab", sans-serif; }
 
 ::selection {
-  color: #fff;
+  background-color: #ffece6;
+  color: #333;
   text-shadow: none; }
+
+.clear {
+  clear: both; }
 
 body {
   background-color: #fff; }
@@ -30,13 +34,27 @@ body {
   HEADER
   ________________________________________________________________________________
 */
+.header_container {
+  padding: 0 10%;
+  margin: 0;
+  display: block;
+  height: 75px;
+  border-bottom: #b3b3b3 0.1em solid; }
+
 .logo_container {
-  display: none; }
+  float: left; }
 
 .navigation_container {
-  display: none; }
+  float: right;
+  font-size: 1rem; }
   .navigation_container .navbar {
-    font-size: 1rem; }
+    margin: 0;
+    padding: 0; }
+    .navigation_container .navbar li {
+      list-style: none;
+      display: inline-block; }
+      .navigation_container .navbar li a {
+        text-decoration: none; }
 
 /*
   MAIN

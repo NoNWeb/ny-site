@@ -1,17 +1,31 @@
 @charset 'utf-8';
 
 .header_container{
-
+  padding: 0 10%;
+  margin: 0;
+  display: block;
+  height: 75px;
+  border-bottom: lighten($ny_grey, 50) 0.1em solid;
 }
+
 // LOGO
 .logo_container{
-  display: none;
+  float: left;
 }
 
 // NAVIGATION
 .navigation_container{
-  display: none;
+  float: right;
+  font-size: 1rem;
   .navbar{
-    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    li{
+      list-style: none;
+      display: inline-block;
+      a{
+        text-decoration: none;
+      }
+    }
   }
 }
