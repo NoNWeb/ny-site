@@ -35,6 +35,7 @@ add_action('admin_enqueue_scripts', 'ny_load_admin_scripts');
 
 function ny_load_scripts(){
   // wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.6', 'all' );
+  wp_enqueue_style('normalize', get_template_directory_uri() . '/css/normalize.css', array(), '4.1.1', 'all' );
   wp_enqueue_style('namaste-yoga', get_template_directory_uri() . '/css/ny.css', array(), '1.0.0', 'all' );
 
   wp_deregister_script('jquery');

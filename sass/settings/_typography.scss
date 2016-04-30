@@ -14,8 +14,11 @@ $body-antialiased: true;
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,700,800);
 $body-font-family: 'Roboto Slab', sans-serif;
 
+\:root{
+  font-size: 16px;
+}
+
 body{
-  font-size: 14px;
   color: $ny-grey;
   font-family: $body-font-family;
 }

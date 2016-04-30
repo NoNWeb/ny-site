@@ -4,32 +4,14 @@
 
 }
 // LOGO
-// .navbar-header{
-//   img{
-//     display: block;
-//     width: 90px;
-//     height: 70px;
-//   }
-// }
+.logo_container{
+  display: none;
+}
 
 // NAVIGATION
-// #navbar{
-//   ul{
-//     li{
-//       :hover{
-//         background: none;
-//       }
-//       a{
-//         text-transform: capitalize;
-//         font-size: 13px;
-//         color: $ny-grey;
-//         :hover{
-//           // text-transform: none;
-//           background: red;
-//         }
-//       }
-//     }
-//   }
-// }
-
-// HERO
+.navigation_container{
+  display: none;
+  .navbar{
+    font-size: 1rem;
+  }
+}

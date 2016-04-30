@@ -12,14 +12,12 @@
 */
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,700,800);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,700,800);
+\:root {
+  font-size: 16px; }
+
 body {
-  font-size: 14px;
   color: #333;
   font-family: "Roboto Slab", sans-serif; }
-
-* {
-  margin: 0;
-  padding: 0; }
 
 ::selection {
   color: #fff;
@@ -32,6 +30,14 @@ body {
   HEADER
   ________________________________________________________________________________
 */
+.logo_container {
+  display: none; }
+
+.navigation_container {
+  display: none; }
+  .navigation_container .navbar {
+    font-size: 1rem; }
+
 /*
   MAIN
   ________________________________________________________________________________
