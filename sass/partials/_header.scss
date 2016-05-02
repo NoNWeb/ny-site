@@ -1,11 +1,15 @@
 @charset 'utf-8';
 
 .header_container{
-  padding: 0 10%;
+  // padding: 0 10%;
   margin: 0;
   display: block;
-  height: 75px;
-  border-bottom: lighten($ny_grey, 50) 0.1em solid;
+  height: 80px;
+  // border-top: lighten($ny_orange, 15%) 5px solid;
+  border-bottom: lighten($ny_black, 90%) 3px solid;
+  position: relative;
+  top: 0;
+  background-color: $ny-white;
 }
 
 // LOGO
@@ -16,15 +20,30 @@
 // NAVIGATION
 .navigation_container{
   float: right;
-  font-size: 1rem;
+  font-size: .9rem;
   .navbar{
     margin: 0;
     padding: 0;
+    line-height: 75px;
     li{
       list-style: none;
       display: inline-block;
+      text-align: center;
+      padding: 0 1rem;
+      &:hover{
+        border-bottom: 0.15em solid $ny_orange;
+        a{
+          color: $ny_orange;
+        }
+      }
       a{
         text-decoration: none;
+        color: lighten($ny_gray, 10%);
+        text-decoration: none;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.15rem;
+        display: block;
       }
     }
   }

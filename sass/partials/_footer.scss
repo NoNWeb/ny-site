@@ -1,1 +1,19 @@
-@charset 'utf-8';
+footer{
+  text-align: center;
+  font-size: .9rem;
+  height: 5rem;
+  padding-top: 1rem;
+  a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: inherit;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  p{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

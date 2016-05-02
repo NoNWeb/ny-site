@@ -5,7 +5,6 @@
 @import 'typography';
 @import 'transitions';
 @import 'buttons';
-@import 'fonts';
 @import 'functions';
 @import 'mediaQueries';
 @import 'mesMexins';
@@ -14,7 +13,7 @@
 
 ::selection{
 	background-color: lighten($ny-orange, 35);
-	color: $ny-grey;
+	color: $ny-gray;
 	text-shadow: none;
 }
 
@@ -22,6 +21,14 @@
 	clear: both;
 }
 
+$box_shadow: 0 1rem 2rem rgba(0,0,0,.5);
+$links_shadow: 0 0.1rem 0.2rem rgba(0,0,0,.5);
+
+html{
+	font-size: 100%;
+	line-height: 1.5em;
+	letter-spacing: .01rem
+}
 body{
-	background-color: $ny-white;
+	background-color: $ny_bg_gray;
 }

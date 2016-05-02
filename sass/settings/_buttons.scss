@@ -1,0 +1,15 @@
+
+
+.links{
+	color: $ny_white;
+	text-decoration: none;
+	border: 1px solid $ny_white;
+	padding: .4rem;
+	background-color: transparent;
+	border-radius: .2rem;
+	&:hover{
+		background-color: $ny_white;
+		color: $ny_gray;
+		transition: $anim_links;
+	}
+}

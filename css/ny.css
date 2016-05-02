@@ -10,15 +10,33 @@
   GLOBAL SETTINGS FOR NAMASTE-YOGA.FR
   ________________________________________________________________________________
 */
+@import url(https://www.google.com/fonts#UsePlace:use/Collection:Source+Sans+Pro:400,600);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,700,800);
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,700,800);
-\:root {
-  font-size: 16px; }
+:root {
+  font-size: 14px; }
 
 body {
   color: #333;
-  font-family: "Roboto Slab", sans-serif; }
+  font-family: "source-sans-pro", "Roboto Slab", Helvetica, Arial, sans-serif; }
 
+.links, .a-propos_container .right_section a, .contact_container .address a {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: .4rem;
+  background-color: transparent;
+  border-radius: .2rem; }
+  .links:hover, .a-propos_container .right_section a:hover, .contact_container .address a:hover {
+    background-color: #fff;
+    color: #333;
+    transition: all 0.2s ease 0.1s; }
+
+@media screen and (min-width: 1024px) {
+  .header_container {
+    padding: 0 6%; }
+
+  .activities_container, .contact_container {
+    padding: 50px 15%; } }
 ::selection {
   background-color: #ffece6;
   color: #333;
@@ -27,42 +45,210 @@ body {
 .clear {
   clear: both; }
 
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+  letter-spacing: 0.01rem; }
+
 body {
-  background-color: #fff; }
+  background-color: #f7f7f7; }
 
 /*
   HEADER
   ________________________________________________________________________________
 */
 .header_container {
-  padding: 0 10%;
   margin: 0;
   display: block;
-  height: 75px;
-  border-bottom: #b3b3b3 0.1em solid; }
+  height: 80px;
+  border-bottom: #e6e6e6 3px solid;
+  position: relative;
+  top: 0;
+  background-color: #fff; }
 
 .logo_container {
   float: left; }
 
 .navigation_container {
   float: right;
-  font-size: 1rem; }
+  font-size: .9rem; }
   .navigation_container .navbar {
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    line-height: 75px; }
     .navigation_container .navbar li {
       list-style: none;
-      display: inline-block; }
+      display: inline-block;
+      text-align: center;
+      padding: 0 1rem; }
+      .navigation_container .navbar li:hover {
+        border-bottom: 0.15em solid #ff6633; }
+        .navigation_container .navbar li:hover a {
+          color: #ff6633; }
       .navigation_container .navbar li a {
-        text-decoration: none; }
+        text-decoration: none;
+        color: #4d4d4d;
+        text-decoration: none;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.15rem;
+        display: block; }
 
 /*
   MAIN
   ________________________________________________________________________________
 */
+.hero_container {
+  background-image: url(https://images.unsplash.com/photo-1447452001602-7090c7ab2db3?crop=entropy&dpr=2&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1700);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 80px 0 0 0;
+  margin: 0; }
+
+.activities_container, .contact_container {
+  color: #8a8a8a;
+  background-color: #fff; }
+  .activities_container h1, .contact_container h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 1.4rem; }
+  .activities_container hr, .contact_container hr {
+    width: 5%;
+    margin-bottom: 4rem;
+    border: 1px #ded6f1 solid; }
+
+.box {
+  height: 200px;
+  padding: 0 40px;
+  border: 0.2rem solid #fff;
+  border-radius: .1rem; }
+  .box header {
+    padding-top: 30px;
+    padding-left: 50px;
+    position: relative;
+    height: 64px; }
+    .box header hr {
+      width: 100%;
+      border: 1px #ded6f1 solid;
+      position: absolute;
+      top: 40px;
+      left: 22px; }
+    .box header span {
+      content: url(../img/ny-dots-icon.png);
+      position: absolute;
+      left: -30px;
+      top: 10px;
+      width: 45px;
+      height: 45px; }
+    .box header h4 {
+      position: absolute;
+      left: 22px;
+      top: 1px;
+      font-size: 1.4rem;
+      font-weight: 500;
+      text-decoration: none;
+      text-transform: capitalize;
+      line-height: .5rem;
+      letter-spacing: 0.15rem;
+      height: 45px;
+      display: block;
+      width: 100%; }
+      .box header h4:hover {
+        color: #330033; }
+      .box header h4 a {
+        display: block; }
+  .box p {
+    position: relative;
+    text-align: justify;
+    min-height: 65px;
+    color: #b0b0b0;
+    font-size: 0.95rem;
+    padding-right: 40px; }
+  .box a {
+    text-decoration: none;
+    color: inherit; }
+    .box a:hover {
+      color: #330033; }
+
+.a-propos_container {
+  height: 420px; }
+  .a-propos_container .left_section {
+    padding: 0; }
+    .a-propos_container .left_section img {
+      background-size: cover;
+      content: url(../img/header_img420.jpg);
+      height: 420px; }
+  .a-propos_container .right_section {
+    color: #fff;
+    padding: 2% 5% 2% 2%;
+    background-color: #8464CA;
+    height: 100%; }
+    .a-propos_container .right_section h1 {
+      text-transform: uppercase;
+      font-weight: 300; }
+    .a-propos_container .right_section p {
+      text-align: justify;
+      min-height: 60%; }
+
+.contact_container .address_farges,
+.contact_container .address_home {
+  height: 420px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative; }
+.contact_container .address {
+  background-color: #8464CA;
+  color: #fff;
+  text-align: center;
+  display: block;
+  width: 20rem;
+  height: 200px;
+  position: absolute;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+  padding: .1rem 1rem;
+  border-radius: 2px; }
+  .contact_container .address p {
+    min-height: 80px; }
+  .contact_container .address h4 {
+    text-transform: uppercase;
+    font-weight: 400;
+    border-bottom: 1px rgba(250, 250, 250, 0.6) solid; }
+  .contact_container .address a:hover {
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.5); }
+.contact_container .address_farges {
+  background-image: url(../img/map-farges.jpg);
+  margin-bottom: 2.5rem; }
+  .contact_container .address_farges .address {
+    bottom: -1rem;
+    left: 2rem; }
+.contact_container .address_home {
+  background-image: url(../img/map-home.jpg); }
+  .contact_container .address_home .address {
+    bottom: -1rem;
+    right: 2rem; }
+
 /*
   FOOTER
   ________________________________________________________________________________
 */
+footer {
+  text-align: center;
+  font-size: .9rem;
+  height: 5rem;
+  padding-top: 1rem; }
+  footer a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: inherit; }
+    footer a:hover {
+      text-decoration: underline; }
+  footer p {
+    padding-top: 0;
+    padding-bottom: 0; }
 
 /*# sourceMappingURL=ny.css.map */

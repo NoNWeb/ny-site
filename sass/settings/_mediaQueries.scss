@@ -1,0 +1,14 @@
+
+// SMALL - If the viewport is 480 pixels small or smaller
+
+// MEDIUM - If the viewport is 640 pixels wide or wider
+
+// LARGE - If the viewport is 1024 pixels wide or wider
+@media screen and (min-width: 1024px){
+  .header_container,{
+    padding: 0 6%;
+  }
+  .activities_container{
+    padding: 50px 15%;
+  }
+}
