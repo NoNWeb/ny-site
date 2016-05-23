@@ -1,6 +1,14 @@
 
 // SMALL - If the viewport is 480 pixels small or smaller
-
+@media screen and (min-width: 320px){
+  .activities_container{
+    .box{
+      h4{
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
 // MEDIUM - If the viewport is 640 pixels wide or wider
 
 // LARGE - If the viewport is 1024 pixels wide or wider

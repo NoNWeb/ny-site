@@ -34,6 +34,7 @@ if(@$background == 1){
 /* Activate Nav Menu Option */
 function ny_register_nav_menu(){
   register_nav_menu('primary', 'Menu Principal');
+  register_nav_menu('secondary', 'Menu du footer');
 }
 add_action('after_setup_theme', 'ny_register_nav_menu');
 

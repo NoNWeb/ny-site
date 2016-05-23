@@ -3,76 +3,66 @@
 
 // HERO
 .hero_container{
-  background-image: url(https://images.unsplash.com/photo-1447452001602-7090c7ab2db3?crop=entropy&dpr=2&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1700);
+  background-image: $img_hd;
   height: 100vh;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  // background-attachment: fixed;
   padding: 80px 0 0 0;
   margin: 0;
 }
 
 // ACTIVITIES
 .activities_container{
-  // display: block;
-  color: $dark_gray;
-  background-color: $ny_white;
+  @include white_containers;
+  background-color: $ny_bg_gray_2;
+  margin-bottom: 4rem;
   h1{
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 300;
-    margin-bottom: 1.4rem;
+    transform: translateX(20px);
+    &.isShowing{
+      transform: translateX(-20px);
+    }
   }
   hr{
-    width: 5%;
-    margin-bottom: 4rem;
-    border: 1px lighten($ny_purple, 30%) solid;
+    transform: translateX(20px);
+    &.isShowing{
+      transform: translateX(-20px);
+    }
   }
 }
 .box{
-  height: 200px;
-  padding: 0 40px;
-  border: 0.2rem solid $ny_white;
+  height: 220px;
+  padding: 5px 40px;
+  margin-top: 3rem;
+  border: 0.2rem solid transparent;
   border-radius: .1rem;
-  // background-color: $ny_bg_gray;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.5s ease-in-out;
+  &:hover{
+    background-color: $ny_white;
+    border: 0.2rem solid $ny_bg_gray;
+    h2{
+      border-bottom: 1px $ny-dark_purple solid;
+    }
+  }
+  &.isShowing{
+    opacity: 1;
+    transform: translateX(-20px);
+  }
   header{
-    padding-top: 30px;
-    padding-left: 50px;
     position: relative;
-    height: 64px;
-    hr{
+    h2{
       width: 100%;
-      border: 1px lighten($ny_purple, 30%) solid;
-      position: absolute;
-      top: 40px;
-      left: 22px;
-    }
-    span{
-      content: url(../img/ny-dots-icon.png);
-      position: absolute;
-      left: -30px;
-      top: 10px;
-      width: 45px;
-      height: 45px;
-    }
-    h4{
-      position: absolute;
-      left: 22px;
-      top: 1px;
-      font-size: 1.4rem;
-      font-weight: 500;
-      text-decoration: none;
-      text-transform: capitalize;
-      line-height: .5rem;
-      letter-spacing: 0.15rem;
-      height: 45px;
-      display: block;
-      width: 100%;
+      border-bottom: 1px $ny_white solid;
+      transition: all 0.3s ease-in-out;
+      // word-spacing: 0.1rem;
       &:hover{
         color: $ny-dark_purple;
       }
       a{
         display: block;
+        width: 100%;
       }
     }
   }
@@ -95,37 +85,37 @@
 
 // A PROPOS
 .a-propos_container{
-  height: 420px;
-  .left_section{
-    padding: 0;
-    img{
-      background-size: cover;
-      content: url(../img/header_img420.jpg);
-      height: 420px;
-    }
-  }
-  .right_section{
+  padding-top: 80px;
+  background-image: $img_hd;
+  // height: 400px;
+  // background: $img_hd no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: $ny_purple;
+  .apropos_txt{
     color: $ny_white;
-    padding: 2% 5% 2% 2%;
-    background-color: $ny-purple;
-    height: 100%;
-    h1{
-      text-transform: uppercase;
-      font-weight: 300;
+    text-align: center;
+    padding-bottom: 5rem;
+    hr{
+      width: 5%;
+      margin-bottom: 4rem;
     }
     p{
-      text-align: justify;
-      min-height: 60%;
+      min-height: 150px;
+      font-size: 1.7rem;
+      font-weight: 200;
+      line-height: 2rem;
+      padding: 0 3rem;
     }
     a{
-      @extend .links;
+      @include links;
     }
   }
 }
 
 // CONTACT
 .contact_container{
-  @extend .activities_container;
+  @include white_containers;
   .address_farges,
   .address_home{
     height: 420px;
@@ -133,6 +123,7 @@
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
+    margin:0 6%;
   }
   .address{
     background-color: $ny_purple;
@@ -148,13 +139,11 @@
     p{
       min-height: 80px;
     }
-    h4{
-      text-transform: uppercase;
-      font-weight: 400;
+    h5{
       border-bottom: 1px rgba(250,250,250,0.6) solid;
     }
     a{
-      @extend .links;
+      @include links;
       &:hover{
         box-shadow: $links_shadow;
       }
@@ -163,6 +152,7 @@
   .address_farges{
     background-image: url(../img/map-farges.jpg);
     margin-bottom: 2.5rem;
+    // padding: 0 20%;
     .address{
       bottom: -1rem;
       left: 2rem;

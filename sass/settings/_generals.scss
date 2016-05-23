@@ -1,0 +1,40 @@
+::selection{
+	background-color: lighten($ny-orange, 35);
+	color: $ny-gray;
+	text-shadow: none;
+}
+
+.clear{
+	clear: both;
+}
+
+:root{
+  font-size: 14px;
+}
+
+$box_shadow: 0 1rem 2rem rgba(0,0,0,.5);
+$links_shadow: 0 0.1rem 0.2rem rgba(0,0,0,.5);
+
+$img_hd: url('https://images.unsplash.com/photo-1447452001602-7090c7ab2db3?crop=entropy&dpr=2&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1700');
+
+html{
+	font-size: 100%;
+	line-height: 1.5em;
+	letter-spacing: .01rem
+}
+
+body{
+	background-color: $ny_bg_gray;
+  color: $ny-gray;
+  font-family: $body-font-family;
+}
+
+// .activities_container,
+// .a-propos_container{
+//   width: 1400px;
+// }
+
+.wrapper{
+  max-width: 1280px;
+  margin: 0 auto;
+}

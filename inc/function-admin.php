@@ -16,6 +16,7 @@ function ny_add_admin_page(){
 // Generate Namaste-Yoga Sub Pages
   add_submenu_page('ny', 'Namaste-Yoga Sidebar Options', 'Sidebar', 'manage_options', 'ny', 'ny_theme_create_page');
   add_submenu_page('ny', 'Namaste-Yoga Theme Options', 'Theme Options', 'manage_options', 'ny_theme', 'ny_theme_support_page');
+  add_submenu_page('ny', 'Namaste-Yoga Contact Form', 'Contact Form', 'manage_options', 'ny_theme_contact', 'ny_contact_form_page');
   add_submenu_page('ny', 'Namaste-Yoga CSS Options', 'Custom CSS', 'manage_options', 'ny_css', 'ny_theme_settings_page');
 
 // Activate custom settings
@@ -54,14 +55,25 @@ function ny_custom_settings(){
 
 
   // Contact Form Options
-  //register_setting('ny-contact-options', 'activate');
-
+  register_setting('ny-contact-options', 'activate_contact');
+  add_settings_section('ny-contact-section', 'Contact Form', 'ny_contact_section', 'ny_theme_contact');
+  add_settings_field('activate-form', 'Activate Contact Form', 'ny_activate_contact', 'ny_theme_contact', 'ny-contact-section');
 
 }
 
 
 function ny_theme_options(){
   echo 'Activate and deactivate specific Theme Options';
+}
+
+function ny_contact_section(){
+  echo 'Activate and deactivate the build-in Contact Form';
+}
+
+function ny_activate_contact(){
+  $options = get_option('activate_contact');
+  $checked = ( @$options == 1 ? 'checked' : '' );
+  echo '<label><input type="checkbox" id="custom_header" name="activate_contact" value="1" '.$checked.' /></label>';
 }
 
 function ny_post_formats(){
@@ -132,7 +144,11 @@ function ny_theme_create_page() {
 }
 
 function ny_theme_support_page() {
-  require_once(get_template_directory() . '/inc/templates/ny_theme_support.php');
+  require_once(get_template_directory() . '/inc/templates/ny-theme-support.php');
+}
+
+function ny_contact_form_page() {
+  require_once(get_template_directory() . '/inc/templates/ny-contact-form.php');
 }
 
 function ny_theme_settings_page() {

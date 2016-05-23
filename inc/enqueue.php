@@ -36,7 +36,7 @@ add_action('admin_enqueue_scripts', 'ny_load_admin_scripts');
 function ny_load_scripts(){
   /* CSS */
   wp_enqueue_style('foundation', get_template_directory_uri() . '/css/foundation.min.css', array(), '3.0.3', 'all' );
-  wp_enqueue_style('normalize', get_template_directory_uri() . '/css/normalize.css', array(), '4.1.1', 'all' );
+  // wp_enqueue_style('normalize', get_template_directory_uri() . '/css/normalize.css', array(), '4.1.1', 'all' );
   wp_enqueue_style('namaste-yoga', get_template_directory_uri() . '/css/ny.css', array(), '1.0.0', 'all' );
 
   /* JavaScript */
@@ -44,5 +44,6 @@ function ny_load_scripts(){
   wp_register_script('jquery', get_template_directory_uri() . '/js/jquery.js', false, '2.2.2', true);
   wp_enqueue_script('jquery');
   wp_enqueue_script('foundation', get_template_directory_uri() . '/js/foundation.min.js', array('jquery'), '6.2.1', true );
+  wp_enqueue_script('ny', get_template_directory_uri() . '/js/ny.js', array('jquery'), '1.0.0', true );
 }
 add_action('wp_enqueue_scripts', 'ny_load_scripts');

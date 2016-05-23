@@ -1,0 +1,69 @@
+// @mixin linx ($link, $visit, $hover, $active) {
+//   a {
+//     color: $link;
+//     &:visited {
+//       color: $visit;
+//     }
+//     &:hover {
+//       color: $hover;
+//     }
+//     &:active {
+//       color: $active;
+//     }
+//   }
+// }
+
+
+@mixin links ($link, $visit, $hover, $active) {
+	color: $link;
+	text-decoration: none;
+	border: 1px solid $ny_white;
+	padding: .4rem;
+	background-color: transparent;
+	border-radius: .2rem;
+	&:visited{
+		color: $visited;
+	}
+	&:hover{
+		color: $hover;
+		background-color: $ny_white;
+		color: $ny_gray;
+		transition: $anim_links;
+		cursor: pointer;
+	}
+	&:active{
+		color: $active;
+	}
+}
+
+
+@mixin white_containers {
+  padding: 80px 0 0 0;
+  color: $dark_gray;
+  background-color: $ny_white;
+  // text-align: center;
+  h1{
+    font-weight: 300;
+    color: $ny_h1;
+    text-transform: capitalize;
+    opacity: 0;
+    // transform: translateX(20px);
+    transition: all 0.3s ease-in-out;
+    &.isShowing{
+      opacity: 1;
+      // transform: translateX(-20px);
+    }
+  }
+  hr{
+    width: 5%;
+    margin-bottom: 4rem;
+    border: 1px lighten($ny_h1, 30%) solid;
+    opacity: 0;
+    // transform: translateX(20px);
+    transition: all 0.3s ease-in-out;
+    &.isShowing{
+      opacity: 1;
+      // transform: translateX(-20px);
+    }
+  }
+}
